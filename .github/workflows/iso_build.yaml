@@ -125,7 +125,7 @@ jobs:
       -
         name: install-mkinitcpio
         run: |          
-          sudo wget https://gitlab.archlinux.org/mkinitcpio/mkinitcpio/-/archive/v29/mkinitcpio-v29.tar.gz mkinitcpio-29.tar.gz
+          sudo wget https://gitlab.archlinux.org/mkinitcpio/mkinitcpio/-/archive/v29/mkinitcpio-v29.tar.gz --output-file=mkinitcpio-29.tar.gz
           sudo tar -xf mkinitcpio-29.tar.gz
           sudo make -C mkinitcpio-29 install
           sudo sed -i -e 's|File|Path|' /usr/share/libalpm/hooks/*hook
